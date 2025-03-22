@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOE | الصفحة الرئيسية</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Rubik+Glitch&family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تعيين الخط */
+* {
+    font-family: "Changa", serif;
+    z-index: 500000;
+}
+
+:root {
+    --main: #004aad;
+    --bgColor: #000000;
+    --gray:#00000079;
+}
+
+/* تحسين الخلفية والنص */
+body {
+    height: 100vh;
+    background-color: var(--main);
+    color: white;
+    position: relative;
+}
+
+/* تحسين الـ Navbar */
+.navbar {
+    padding: 15px;
+    background-color: #000000d2;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease-in-out;
+    z-index: 800000000000;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    margin: 5px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--bgColor);
+    color: white !important;
+}
+
+/* تحسين السيكشن #home */
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 130px;
+}
+
+
+/* تحسين الأيقونات */
+#home .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 66px;
+}
+
+#home .icons i {
+    padding: 10px;
+    font-size: 36px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--main);
+}
+
+#home .icons i:hover {
+    transform: translateY(-5px);
+}
+
+#home .icons  .fa-youtube:hover{
+    color: red;
+}
+
+#home .icons  .fa-twitch:hover{
+    color: #8e45f7;
+}
+#home .icons  .fa-playstation:hover{
+    color: #0070d1;
+}
+
+#home .icons  .fa-tiktok:hover{
+    color: #af0083;
+}
+
+
+
+
+
+#home .container .yousef{
+    font-size: 52px;
+}
+
+@media (max-width:1400px){
+    #home .img .main{
+        font-size: 100px;
+    } 
+    #home .yousef{
+        font-size: 30px;
+    }
+}
+
+::selection{
+    background-color: var(--bgColor);
+    color: white;
+}
+
+hr{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    padding: 38px;
+    color: var(--bgColor);
+}
+
+#about {
+    position: relative;
+}
+
+#about .container .txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+}
+
+#about .container .txt img{
+    width: 320px;
+    box-shadow:  13px 0 32px #0f61cc8c;
+}
+
+@media (min-width:1400px){
+    #about .container .txt img{
+        margin-right: 30px;
+    }
+
+    #skills .container .txt .row .box{
+        margin-right: 12px;
+    }
+
+    
+}
+
+@media (max-width:1400px){
+    #about .container .txt{
+
+        flex-direction: column;
+        text-align: center;
+
+
+    }
+
+    #about .container .txt .text{
+        margin-bottom: 30px;
+    }
+}
+
+#about:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    position: absolute;
+    clip-path: circle(20% at right 50%);
+    top: -420px;
+    z-index: 0;
+}
+
+#about:before {
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: var(--main);
+    position: absolute;
+    bottom: -120px;
+    right: calc(10% - 500px); /* يخلي اليسار متغير بناءً على نسبة الشاشة */
+    border-radius:10px;
+    z-index: 0;
+    transform: rotate(-3deg); 
+}
+
+
+#skills{
+    position: relative;
+}
+
+#skills .container .txt{
+    text-align: center;
+    padding: 20px;
+}
+
+#skills .container .txt .row{
+    padding: 20px;
+}
+
+
+
+
+#skills .container .txt .row .box{
+    background-color: var(--main);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow:  13px 0 22px #df06068c;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 40px;
+}
+
+
+
+#skills .container .txt .row .box i{
+    font-size: 59px;
+    padding: 10px;
+}
+
+
+
+#skills .container .txt .row .box:hover{
+    transform: translateY(-20px);
+    box-shadow:  15px 2px 32px #ff00008c;
+}
+
+
+#skills:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    position: absolute;
+    clip-path: circle(15% at left 50%);
+    top: 420px;
+    z-index: 0;
+}
+
+
+#projects .container .txt {
+    text-align: center;
+    padding: 35px;
+}
+
+
+#projects .container .txt .row .box img{
+
+    width: 100%;
+    border-radius: 5% 5% 0 0;
+}
+
+
+
+#projects .container .txt .row .box {
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow:  0px 0px 52px #5501018c;
+    margin-bottom: 25px;
+    border: 3px dotted var(--main);
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: var(--bgColor);
+}
+
+
+#projects .container .txt .row .box .text{
+    padding: 20px;
+}
+
+
+#projects .container .txt .row .box:hover{
+    transform: scale(1.1) rotate(5deg);
+        box-shadow:  0px 0px 72px #7001018c;
+}
+
+.btn{
+    background-color: var(--main);
+    color: white;
+}
+
+.btn:hover{
+    background-color: #790707;
+    z-index: -800000000000000000000000000000000000;
+}
+
+
+
+.big-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: -5000px; /* رفعها عشان تكون واضحة */
+    transform: rotate(-18deg);
+    z-index: -1; /* تخليها في الخلفية */
+    pointer-events: none;
+}
+
+
+.bigo-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: -5800px; /* رفعها عشان تكون واضحة */
+    transform: rotate(18deg);
+    z-index: -1; /* تخليها في الخلفية */
+    pointer-events: none;
+    right:800px;
+}
+
+
+#friends .container .row .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px;
+    background-color: #ffffff60;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#friends .container .row .box img{
+    border-radius: 15px 0 0 15px;
+}
+
+#friends .container .row .box h4{
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--main);
+}
+
+@media (max-width:1400px){
+    #friends .container .row .box{
+        flex-direction: column;
+        text-align: center;
+    }
+    #friends .container .row .box .text{
+        padding: 20px;
+    }
+    
+.big-star{
+    width: 300px;
+    height: 300px;
+}
+    
+.bigo-star{
+    width: 300px;
+    height: 300px;
+    right:-1200px;
+}
+footer .container
+{
+    flex-direction: column;
+    text-align: center;
+}
+footer{
+    border-radius: none;
+    border: none;
+    text-align: center;
+}
+
+footer img{
+    width: 300px;
+}
+}
+
+
+footer .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align-last: left;
+
+}
+
+footer{
+    border: 3px double var(--main);
+    margin: 20px;
+    border-radius: 30px 30px  0 0;
+}
+
+.up {
+    background-color: var(--gray);
+    color: white;
+    border: none;
+    padding: 26px;
+    border-radius: 20%;
+    position: fixed;
+    bottom: -100px; /* مخفي تحت */
+    right: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition:0.2s;
+    z-index: 999999999;
+    font-size: 35px;
+    opacity: 0;
+}
+
+/* عند إضافة كلاس "show" يرجع الزرار لمكانه ويظهر */
+.up.show {
+    bottom: 20px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* تأثير الهوفر */
+.up:hover {
+    background-color: #790707;
+    transform: scale(1.1);
+}
+
+#img .container .box {
+    margin: 20px;
+    padding: 20px;
+    border: 3px dashed var(--main);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px; /* زودت الارتفاع عشان الصور تكون أكبر */
+    box-shadow: 0 0 20px var(--main);
+    transition: 0.2s;
+}
+
+#img .container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يخلي الصورة تملى المساحة بدون تشوه */
+}
+
+#img .container .box:hover{
+    box-shadow: 0 0 30px #ff1515;
+}
+    </style>
+</head>
+<body dir="rtl">
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top p-0" style="background-color:#004aad;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="yossef (1)/9.png" class="img-fluid" style="width:160px;" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#img">معرض الصور</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">اعمالنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">منتجاتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#friends">شركائنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start #home -->
+    <section id="home">
+        <div class="container">
+            <div class="txt">
+                <h1 class="text-effect">أهلاً بكم </h1>
+                <h1 class="text-effect main yousef">أنا معاذ سيد رضا صاحب شركة</h1>
+                <div class="img">
+                    <img src="yossef (1)/9.png" alt="">
+                </div>
+                <h1 class="text-effect">صاحب اكبر شركة لصناعة السلوفان في مصر والشرق الوسط</h1>
+            </div>
+            <div class="icons">
+                <a href='#'><i class="fa-brands fa-youtube"></i></a>
+                <a href='#'><i class="fa-brands fa-twitch"></i></a>
+                <a href='#'><i class="fa-brands fa-playstation"></i></a>
+                <a href='#'><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- End #home -->
+
+
+    <!-- Start #about -->
+
+    <section id="about">
+        <div class="container">
+            <hr><br><br>
+            <h1 class="title">من أنا</h1>
+            <div class="txt">
+                <div class="text">
+                    <p class="text-white-50">اهلا بكم انا معاذ سيد رضا , صاحب شركة معاذ للسلوفان</p>
+                </div>
+                <div class="img">
+                    <img src="yossef (1)/GridArt_٢٠٢٤٠٦٢٠_٢٠٠٦٥٨٥٤٩.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End #about -->
+
+
+    <!-- Start #img -->
+
+    <section id="img">
+        <div class="container">
+            <br><br><br><br><br><hr><br><br>
+            <h1 class="title">معرض الصور</h1>
+            <div class="txt">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <img src="yossef (1)/Screenshot_٢٠٢٤-٠٤-٢٩-٠٠-١٣-٠٨-٦٩_99c04817c0de5652397fc8b56c3b3817.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <img src="yossef (1)/Screenshot_٢٠٢٤-٠٤-٢٩-١١-٠٥-٠٤-٧٧_99c04817c0de5652397fc8b56c3b3817.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <img src="yossef (1)/GridArt_٢٠٢٤٠٦٢١_١٩١٧٥٥٤٥٣.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <img src="yossef (1)/Screenshot_٢٠٢٤-٠٤-٢٩-٠٠-٠١-٠١-٤٢_99c04817c0de5652397fc8b56c3b3817.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <img src="yossef (1)/GridArt_٢٠٢٤٠٦٢٠_٢٠٢١٣٧٥٩٨.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <img src="yossef (1)/IMG20220719213505.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End #img -->
+    
+    
+    <!-- Start #skills -->
+
+    <section id="skills">
+        <div class="container">
+            <br><br><br><br><br><hr><br><br>
+            <h1 class="title">مهاراتي</h1>
+            <div class="txt">
+                <p class="text-white-50">انا لدي العديد من المهارات منها : </p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <i class="fa-solid fa-computer"></i>
+                            <h4>تعلم البرمجة وحبها</h4>
+                            <p class="text-white-50">منذ ان تعلمت البرمجة وانا احب ان اعلي مستوايا فيها ومستوايا يعلا يوما عن يوم , بفضل الله </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <i class="fa-solid fa-computer"></i>
+                            <h4>تعلم البرمجة وحبها</h4>
+                            <p class="text-white-50">منذ ان تعلمت البرمجة وانا احب ان اعلي مستوايا فيها ومستوايا يعلا يوما عن يوم , بفضل الله </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <i class="fa-solid fa-computer"></i>
+                            <h4>تعلم البرمجة وحبها</h4>
+                            <p class="text-white-50">منذ ان تعلمت البرمجة وانا احب ان اعلي مستوايا فيها ومستوايا يعلا يوما عن يوم , بفضل الله </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+
+    <!-- End #skills -->
+    <!-- Start #projects -->
+
+    <section id="projects">
+        <div class="container">
+            <br><br><br><br><br><hr><br><br>
+            <h1 class="title">مشاريعي</h1>
+            <div class="txt">
+                <p class="text-white-50" style="z-index: 99999999999999999999999999999999999;">انا لدي العديد من المشاريع الرائعة منها  : </p>
+                <div class="row">
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 101743.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>موقع الله يرحمك</h3>
+                                <a href="https://yousef-elnawawy.github.io/rippo/" target="_blank" class="btn">شاهده الان</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 101605.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>موقع كل سنه وانت طيوب</h3>
+                                <a href="https://yousef-elnawawy.github.io/birth/" target="_blank" class="btn">شاهده الان</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 101902.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>موقع  فوازير</h3>
+                                <a href="https://yousef-elnawawy.github.io/fawazer/" target="_blank" class="btn">شاهده الان</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 102137.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>العابي علي سكراتش</h3>
+                                <a href="scratch.html" target="_blank" class="btn">شاهده الان</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 102454.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>قناتي علي يوتيوب</h3>
+                                <a href="https://www.youtube.com/@JOE675_nawawy" target="_blank" class="btn">شاهده الان</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End #projects -->
+
+
+    <!-- Start #friends -->
+     <section id="friends">
+        <svg class="big-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" fill="red"/>
+        </svg>        
+        <div class="container">
+            <br><br><br><br><br><hr><br><br>
+            <h1 class="title">اصدقائي</h1>
+            <div class="txt">
+                <p class="text-white-50 text-center " style="z-index: 99999999999999999999999999999999999;">انا لدي العديد من الاصدقاء الرائعين والمميزين  منهم  : </p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box">
+
+                            <div class="text">
+                                <h4>معاذ سيد رضا</h4>
+                                <p>معاذ هو من احد افضل اصدقائي وايضا هو من اشطرهم , يحب مادة الدراسات الاجتماعية جدا , عكسي تماما 🤣🤣 , وايضا يحب كرة القدم ولاعبه المفضل كريستيانو رونالدو ...... سييييييييييييييي 🤣🤣🤣 , وهو يحلم ان يكبر مصنع ابيه الخاص بالسلوفان وقد صنعت له موقعا ليشجعه علي ذلك</p>
+                                <a href="#" class="btn">شاهده الان</a>
+                            </div>
+                            <div class="img ">
+                                <img src="yossef (1)/cropped_right_part.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="box">
+
+                            <div class="text">
+                                <h4>معاذ سيد رضا</h4>
+                                <p>معاذ هو من احد افضل اصدقائي وايضا هو من اشطرهم , يحب مادة الدراسات الاجتماعية جدا , عكسي تماما 🤣🤣 , وايضا يحب كرة القدم ولاعبه المفضل كريستيانو رونالدو ...... سييييييييييييييي 🤣🤣🤣 , وهو يحلم ان يكبر مصنع ابيه الخاص بالسلوفان وقد صنعت له موقعا ليشجعه علي ذلك</p>
+                                <a href="#" class="btn">شاهده الان</a>
+                            </div>
+                            <div class="img ">
+                                <img src="yossef (1)/cropped_right_part.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="box">
+
+                            <div class="text">
+                                <h4>معاذ سيد رضا</h4>
+                                <p>معاذ هو من احد افضل اصدقائي وايضا هو من اشطرهم , يحب مادة الدراسات الاجتماعية جدا , عكسي تماما 🤣🤣 , وايضا يحب كرة القدم ولاعبه المفضل كريستيانو رونالدو ...... سييييييييييييييي 🤣🤣🤣 , وهو يحلم ان يكبر مصنع ابيه الخاص بالسلوفان وقد صنعت له موقعا ليشجعه علي ذلك</p>
+                                <a href="#" class="btn">شاهده الان</a>
+                            </div>
+                            <div class="img ">
+                                <img src="yossef (1)/cropped_right_part.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="box">
+
+                            <div class="text">
+                                <h4>معاذ سيد رضا</h4>
+                                <p>معاذ هو من احد افضل اصدقائي وايضا هو من اشطرهم , يحب مادة الدراسات الاجتماعية جدا , عكسي تماما 🤣🤣 , وايضا يحب كرة القدم ولاعبه المفضل كريستيانو رونالدو ...... سييييييييييييييي 🤣🤣🤣 , وهو يحلم ان يكبر مصنع ابيه الخاص بالسلوفان وقد صنعت له موقعا ليشجعه علي ذلك</p>
+                                <a href="#" class="btn">شاهده الان</a>
+                            </div>
+                            <div class="img ">
+                                <img src="yossef (1)/cropped_right_part.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <svg class="bigo-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" fill="red"/>
+        </svg> 
+     </section>
+    <!-- End #friends -->
+
+
+
+
+    <!-- Start #footer -->
+     <footer class=" p-2">
+        <div class="container">
+            <img src="yossef (1)/تصميم بدون عنوان.png" alt="">
+            <div class="text">
+                <h6>شكرا لكم علي زيارة موقعي 😁😁</h6>
+                <h6>سلاااااااااام</h6>
+                <br><br>
+                <h6>جميع الحقوق المحغوظه &copy; <a href="index.html" style="color: var(--main);     font-family: 'Rubik Glitch', serif; text-decoration: none;">JOE</a></h6>
+            </div>
+        </div>
+          
+    </footer>
+
+    <!-- End #footer -->
+
+
+
+    <button class="up">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener("scroll", function () {
+    let upButton = document.querySelector(".up");
+
+    if (window.scrollY > 400) { // لما ينزل تحت 300px يظهر الزرار
+        upButton.classList.add("show");
+    } else {
+        upButton.classList.remove("show");
+    }
+});
+
+// كود لجعل الزرار يطلع لفوق عند الضغط عليه
+document.querySelector(".up").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // حركة انسيابية عند الصعود
+    });
+});
+
+    </script>
+</body>
+</html>

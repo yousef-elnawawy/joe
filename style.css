@@ -1,0 +1,528 @@
+/* تعيين الخط */
+* {
+    font-family: "Changa", serif;
+    z-index: 500000;
+}
+
+:root {
+    --main: #ff0000;
+    --bgColor: #000;
+}
+
+/* تحسين الخلفية والنص */
+body {
+    height: 100vh;
+    background-color: var(--bgColor);
+    color: white;
+    position: relative;
+}
+
+/* تحسين الـ Navbar */
+.navbar {
+    padding: 15px;
+    background-color: #000000a1;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease-in-out;
+    z-index: 800000000000;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    margin: 5px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--main);
+    color: white !important;
+}
+
+
+/* تحسين السيكشن #home */
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* تحسين تأثير الجليتش */
+.text-effect {
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 0 0 10px var(--main), 
+                 0 0 20px var(--main);
+}
+@keyframes glitch {
+    0% { 
+        text-shadow: -6px 0 12px var(--main); 
+    }
+    25% {
+        text-shadow: 6px 0 12px var(--main);
+    }
+    50% { 
+        text-shadow: -8px 0 16px var(--main); 
+    }
+    75% {
+        text-shadow: 8px 0 16px var(--main);
+    }
+    100% { 
+        text-shadow: -6px 0 12px var(--main);
+    }
+}
+
+/* تحسين الأيقونات */
+#home .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 66px;
+}
+
+#home .icons i {
+    padding: 10px;
+    font-size: 36px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--main);
+}
+
+#home .icons i:hover {
+    transform: translateY(-5px);
+}
+
+#home .icons  .fa-youtube:hover{
+    color: red;
+}
+
+#home .icons  .fa-twitch:hover{
+    color: #8e45f7;
+}
+#home .icons  .fa-playstation:hover{
+    color: #0070d1;
+}
+
+#home .icons  .fa-tiktok:hover{
+    color: #af0083;
+}
+
+
+
+
+
+#home .img .main  {
+    font-size: 190px;
+    font-family: "Rubik Glitch", serif;
+    padding: 30px;
+    color: var(--main);
+    animation: glitch 3s infinite;
+}
+
+#home .txt  span , .navbar .main{
+    font-family: "Rubik Glitch", serif;
+    color: var(--main);
+    animation: glitch 3s infinite;
+}
+
+#about .txt  span{
+    font-family: "Rubik Glitch", serif;
+    color: var(--main);
+    padding: 0;
+    margin: 0;
+}
+
+
+#home .container .yousef{
+    font-size: 52px;
+}
+
+@media (max-width:1400px){
+    #home .img .main{
+        font-size: 100px;
+    } 
+    #home .yousef{
+        font-size: 30px;
+    }
+}
+
+::selection{
+    background-color: var(--main);
+    color: white;
+}
+
+hr{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    padding: 38px;
+    color: var(--main);
+}
+
+#about {
+    position: relative;
+}
+
+#about .container .txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+}
+
+#about .container .txt img{
+    width: 320px;
+    box-shadow:  13px 0 22px #df06068c;
+}
+
+@media (min-width:1400px){
+    #about .container .txt img{
+        margin-right: 30px;
+    }
+
+    #skills .container .txt .row .box{
+        margin-right: 12px;
+    }
+
+    
+}
+
+@media (max-width:1400px){
+    #about .container .txt{
+
+        flex-direction: column;
+        text-align: center;
+
+
+    }
+
+    #about .container .txt .text{
+        margin-bottom: 30px;
+    }
+}
+
+#about:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    position: absolute;
+    clip-path: circle(20% at right 50%);
+    top: -420px;
+    z-index: 0;
+}
+
+#about:before {
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: var(--main);
+    position: absolute;
+    bottom: -120px;
+    right: calc(10% - 500px); /* يخلي اليسار متغير بناءً على نسبة الشاشة */
+    border-radius:10px;
+    z-index: 0;
+    transform: rotate(-3deg); 
+}
+
+
+#skills{
+    position: relative;
+}
+
+#skills .container .txt{
+    text-align: center;
+    padding: 20px;
+}
+
+#skills .container .txt .row{
+    padding: 20px;
+}
+
+
+
+
+#skills .container .txt .row .box{
+    background-color: var(--main);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow:  13px 0 22px #df06068c;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 40px;
+}
+
+
+
+#skills .container .txt .row .box i{
+    font-size: 59px;
+    padding: 10px;
+}
+
+
+
+#skills .container .txt .row .box:hover{
+    transform: translateY(-20px);
+    box-shadow:  15px 2px 32px #ff00008c;
+}
+
+
+#skills:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    position: absolute;
+    clip-path: circle(15% at left 50%);
+    top: 420px;
+    z-index: 0;
+}
+
+
+#projects .container .txt {
+    text-align: center;
+    padding: 35px;
+}
+
+
+#projects .container .txt .row .box img{
+
+    width: 100%;
+    border-radius: 5% 5% 0 0;
+}
+
+
+
+#projects .container .txt .row .box {
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow:  0px 0px 52px #5501018c;
+    margin-bottom: 25px;
+    border: 3px dotted var(--main);
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: var(--bgColor);
+}
+
+
+#projects .container .txt .row .box .text{
+    padding: 20px;
+}
+
+
+#projects .container .txt .row .box:hover{
+    transform: scale(1.1) rotate(5deg);
+        box-shadow:  0px 0px 72px #7001018c;
+}
+
+.btn{
+    background-color: var(--main);
+    color: white;
+}
+
+.btn:hover{
+    background-color: #790707;
+    z-index: -800000000000000000000000000000000000;
+}
+
+
+
+.big-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: -5000px; /* رفعها عشان تكون واضحة */
+    transform: rotate(-18deg);
+    z-index: -1; /* تخليها في الخلفية */
+    pointer-events: none;
+}
+
+
+.bigo-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: -5800px; /* رفعها عشان تكون واضحة */
+    transform: rotate(18deg);
+    z-index: -1; /* تخليها في الخلفية */
+    pointer-events: none;
+    right:800px;
+}
+
+
+#friends .container .row .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px;
+    background-color: #ffffff60;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#friends .container .row .box img{
+    border-radius: 15px 0 0 15px;
+}
+
+#friends .container .row .box h4{
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--main);
+}
+
+@media (max-width:1400px){
+    #friends .container .row .box{
+        flex-direction: column;
+        text-align: center;
+    }
+    #friends .container .row .box .text{
+        padding: 20px;
+    }
+    
+.big-star{
+    width: 300px;
+    height: 300px;
+}
+    
+.bigo-star{
+    width: 300px;
+    height: 300px;
+    right:-1200px;
+}
+footer .container
+{
+    flex-direction: column;
+    text-align: center;
+}
+footer{
+    border-radius: none;
+    border: none;
+    text-align: center;
+}
+
+footer img{
+    width: 300px;
+}
+}
+
+
+footer .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align-last: left;
+
+}
+
+footer{
+    border: 3px double var(--main);
+    margin: 20px;
+    border-radius: 30px 30px  0 0;
+}
+
+.up {
+    background-color: var(--main);
+    color: white;
+    border: none;
+    padding: 26px;
+    border-radius: 20%;
+    position: fixed;
+    bottom: -100px; /* مخفي تحت */
+    right: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition:0.2s;
+    z-index: 999999999;
+    font-size: 35px;
+    opacity: 0;
+}
+
+/* عند إضافة كلاس "show" يرجع الزرار لمكانه ويظهر */
+.up.show {
+    bottom: 20px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* تأثير الهوفر */
+.up:hover {
+    background-color: #790707;
+    transform: scale(1.1);
+}
+
+#img .container .box {
+    margin: 20px;
+    padding: 20px;
+    border: 3px dashed var(--main);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px; /* زودت الارتفاع عشان الصور تكون أكبر */
+    box-shadow: 0 0 20px var(--main);
+    transition: 0.2s;
+}
+
+#img .container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يخلي الصورة تملى المساحة بدون تشوه */
+}
+
+#img .container .box:hover{
+    box-shadow: 0 0 30px #ff1515;
+}
+
+
+.scroll-container {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 2px solid  var(--scrpl);
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  /* تخصيص شريط التمرير */
+  ::-webkit-scrollbar {
+    width: 15px; /* عرض شريط التمرير */
+  }
+
+  /* مسار شريط التمرير (الخلفية) */
+  ::-webkit-scrollbar-track {
+    background-color: #000000d2;
+    backdrop-filter: blur(10px); 
+  }
+
+  /* المقبض المتحرك (Thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: var(--main);
+
+  }
+
+  /* تغيير لون المقبض عند التمرير */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aa1515;
+  }
+
+  /* لون أكثر وضوحاً لشريط التمرير عند الاستخدام */
+  ::-webkit-scrollbar-thumb:active {
+    background: #810101;
+  }
